@@ -1,0 +1,5 @@
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+add_executable(ambient-light main.cpp AmbientLight.cpp)
+target_link_libraries(ambient-light Qt5::Core Qt5::DBus Qt5::Sensors)
+install(TARGETS ambient-light DESTINATION bin)
